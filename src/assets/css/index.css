@@ -100,7 +100,20 @@ div {
   width: 300px;
   font-size: 18px;
   font-weight: 600;
-  padding: 14px 75px;
+  padding: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+}
+
+.change-button {
+  user-select: none;
+  margin: 0 auto;
+  color: #fff;
+  background: #0084da;
+  width: 300px;
+  font-size: 18px;
+  font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
   text-align: center;

@@ -5,7 +5,6 @@ import { QuizContext } from '../context/quiz'
 const Question = () => {
 	const [state, dispatch] = useContext(QuizContext)
 	const currentQuestion = state.questions[state.currentQuestionId]
-	const isCorrect = state.currentAnswer === currentQuestion.correctAnswer
 
 	return (
 		<div>
@@ -22,15 +21,9 @@ const Question = () => {
 					/>
 				))}
 			</div>
-			{isCorrect ? (
-				<div className={'next-button'} onClick={isCorrect && (() => dispatch({ type: 'NEXT' }))}>
-					Next question
-				</div>
-			) : (
-				<div className={'next-button'} onClick={() => dispatch({ type: 'RESTART' })}>
-					Retry
-				</div>
-			)}
+			<div className={'next-button'} onClick={() => dispatch({ type: 'NEXT' })}>
+				Next question
+			</div>
 		</div>
 	)
 }
